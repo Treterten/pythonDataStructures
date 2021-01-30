@@ -7,17 +7,20 @@ class Array():
       raise TypeError('Invalid DataType')
     self.dataType = dataType
   def setAt(self, index, item):
-    if (self.size == self.length):
-      raise ValueError('Array is at max capacity.')
+    if (index > self.size - 1 or index < 0):
+      raise IndexError('Invalid Index for Array Size')
     if (type(item) != self.dataType):
       raise TypeError('Invalid Type for Array')
     self.storage[index] = item
+    self.length += 1
   def get(self, index):
     return self.storage[index]
 
 
 def testArray():
-  myArr = Array(str, '4')
+  myArr = Array(str, 4)
   myArr.setAt(0, '2')
+  print(myArr.get(0))
+  myArr.setAt(5, 'Hello')
 
 testArray()
