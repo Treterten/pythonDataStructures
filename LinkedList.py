@@ -23,6 +23,14 @@ class LinkedList():
       tagetNode = targetNode.next
     newNode.next = targetNode.next
     targetNode.next = newNode
+  def removeFromHead(self):
+    self.head = self.head.next
+  def get(self, value):
+    node = self.head
+    while (node != None):
+      if (node.value == value):
+        return node
+    return None
 
 class Node():
   def __init__(self, value):
