@@ -11,6 +11,10 @@ class LinkedList():
     else:
       self.tail.next = newNode
       self.tail = newNode
+  def addToHead(self, value):
+    newNode = Node(value)
+    newNode.next = self.head
+    self.head = newNode
   def insertAtIndex(self, index, value):
     #TODO: Implementation
     newNode = Node(value)
