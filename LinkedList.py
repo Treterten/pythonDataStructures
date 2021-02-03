@@ -11,10 +11,14 @@ class LinkedList():
     else:
       self.tail.next = newNode
       self.tail = newNode
-
-
-
-
+  def insertAtIndex(self, index, value):
+    #TODO: Implementation
+    newNode = Node(value)
+    targetNode = self.head
+    for i in range(0, index - 1):
+      tagetNode = targetNode.next
+    newNode.next = targetNode.next
+    targetNode.next = newNode
 
 class Node():
   def __init__(self, value):
