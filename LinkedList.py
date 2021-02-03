@@ -32,10 +32,14 @@ class LinkedList():
         return node
       node = node.next
     return None
-  # def getIndex(self, value):
-  #   node = self.head
-  #   index = 0
-  #   while (node != Nnoe)
+  def getIndex(self, value):
+    node = self.head
+    index = 0
+    while (node != None):
+      if (node.value == value):
+        return index
+      index += 1
+      node = node.next
 
 class Node():
   def __init__(self, value):
