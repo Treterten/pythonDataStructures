@@ -1,6 +1,5 @@
 class LinkedList():
   def __init__(self):
-    self.storage = {}
     self.head = None
     self.tail = None
   def addToTail(self, value):
