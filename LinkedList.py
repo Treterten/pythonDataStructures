@@ -40,6 +40,8 @@ class LinkedList():
         return index
       index += 1
       node = node.next
+    return index
+
   def printList(self):
     node = self.head
     string = ''
@@ -60,3 +62,5 @@ if __name__ == '__main__':
   myList.addToTail('crying')
   myList.addToHead('newHeadHaha')
   print(myList.printList())
+  myList.removeFromHead()
+  print(myList.)
