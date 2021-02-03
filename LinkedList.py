@@ -40,8 +40,23 @@ class LinkedList():
         return index
       index += 1
       node = node.next
+  def printList(self):
+    node = self.head
+    string = ''
+    while (node != None):
+      string += node.value + '->'
+      node = node.next
+    return string
 
 class Node():
   def __init__(self, value):
     self.value = value
     self.next = None
+
+if __name__ == '__main__':
+  myList = LinkedList()
+  myList.addToTail('hi')
+  myList.addToTail('never')
+  myList.addToTail('crying')
+  myList.addToHead('newHeadHaha')
+  print(myList.printList())
